@@ -1,30 +1,28 @@
-# Wallets tracking notify (Announcement of webhook activity payment stake address)
+# DCOne Crypto
+
+### Notification of wallet tracking via Webhook, API (Announcement of webhook activity payment stake address)
 
 * Readmore: https://docs.dconecrypto.finance/notify/webhooks
 > Note: Create an account before using the APIs 
 1. Create an account: `Mainnet` https://dconecrypto.finance
-2. Create an account: `Testnet` https://testnet.dconecrypto.finance
 
-# REST API
+### REST API
 
 Network: `Mainnet`
 Endpoint: `https://dconecrypto-mainnet.dconecrypto.finance/`
 
-Network: `Testnet`
-Endpoint: `https://dconecrypto-testnet.dconecrypto.finance/`
-
-
-# Credentials when using API
+### Credentials when using API
 
 ```shell
 Authorization: Bearer {{accessToken}}
 ```
 
-# Authenticate
+### Authenticate
+Example api request:
 * Required field: userNameOrEmailAddress , password
 
 ```shell
-curl --location 'https://dconecrypto-testnet.dconecrypto.finance/api/TokenAuth/Authenticate' \
+curl --location '{{domain}}/api/TokenAuth/Authenticate' \
 --header 'Content-Type: application/json' \
 --data '{
   "userNameOrEmailAddress": "",
@@ -32,7 +30,7 @@ curl --location 'https://dconecrypto-testnet.dconecrypto.finance/api/TokenAuth/A
   "rememberClient": true
 }'
 ```
-#Example api Authenticate responses
+Example api Authenticate responses
 ```shell
 {
   "accessToken": "string",
@@ -52,7 +50,7 @@ curl --location 'https://dconecrypto-testnet.dconecrypto.finance/api/TokenAuth/A
 }
 ```
 
-# Create a new webhook (CreateOrEdit)
+### Create a new webhook (CreateOrEdit)
 
 Once a payment is detected in the stake address, it will be activated and the webhook call will work
 
@@ -72,7 +70,7 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/CreateOrEdit' 
 }'
 ```
 
-# List of webhook connections (GetAll)
+### List of webhook connections (GetAll)
 
 Get a list of all webhooks connected to the system
 
@@ -83,7 +81,7 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/GetAll' \
 --data ''
 ```
 
-# Get detailed information of a webhook (GetDC_WebhookWalletForEdit)
+### Get detailed information of a webhook (GetDC_WebhookWalletForEdit)
 
 Get a list of all webhooks connected to the system
 
@@ -94,7 +92,7 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/GetDC_WebhookW
 --data ''
 ```
 
-# Remove webhooks (Delete)
+### Remove webhooks (Delete)
 
 Remove 1 webhook information and don't trigger notification when stake address payment
 
@@ -105,7 +103,7 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/Delete?null=d2
 --data ''
 ```
 
-# Get userId by token (GetAllUserForTableDropdown)
+### Get userId by token (GetAllUserForTableDropdown)
 
 Get the userId variable and put in the userId input parameter in the "CreateOrEdit" api
 
@@ -115,5 +113,38 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/GetAllUserForT
 --data ''
 ```
 
+### Example success response:
+```json
+{
+    "result": null,
+    "targetUrl": null,
+    "success": true,
+    "error": null,
+    "unAuthorizedRequest": false,
+    "__abp": true
+}
+```
+
+### Example error response:
+```json
+{
+    "result": null,
+    "targetUrl": null,
+    "success": false,
+    "error": {
+        "code": 0,
+        "message": "You have exceeded your account limit",
+        "details": null,
+        "validationErrors": null
+    },
+    "unAuthorizedRequest": false,
+    "__abp": true
+}
+
+### Application GUI Screenshots
+
+![add](https://user-images.githubusercontent.com/106427209/222141713-45eb4015-6107-4581-bd9a-863b0313c035.PNG)
+![list](https://user-images.githubusercontent.com/106427209/222141715-ac1d8cb1-12ac-460e-a35d-48eef0f14622.PNG)
+![api](https://user-images.githubusercontent.com/106427209/222142086-bc5c6a7f-e8ac-4035-b018-2adc9bd8cc1e.PNG)
 
 
