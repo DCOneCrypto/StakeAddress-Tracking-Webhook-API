@@ -27,7 +27,7 @@ Authorization: Bearer {{accessToken}}
 curl --location 'https://dconecrypto-testnet.dconecrypto.finance/api/TokenAuth/Authenticate' \
 --header 'Content-Type: application/json' \
 --data '{
-  "userNameOrEmailAddress": "dconecryptofinance",
+  "userNameOrEmailAddress": "",
   "password": "",
   "rememberClient": true
 }'
