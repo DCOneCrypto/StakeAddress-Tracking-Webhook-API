@@ -140,11 +140,32 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/GetAllUserForT
     "unAuthorizedRequest": false,
     "__abp": true
 }
+```
+
+### Trigger webhook callback and return data results
+
+Note: Trigger webhook callback (result `webhookUrl` in `CreateOrEdit` api) and data result returned
+
+```json
+[
+  {
+    "total_balanceOld": 26838691,
+    "total_balance": 16663070,
+    "utxo": 16593105,
+    "rewards": 15465007,
+    "withdrawals": 15395042,
+    "rewards_available": 69965,
+    "StakeAddress": "stake1uxa5t2u5j43gv03esw8s726v8ul4c6r3g0d7x97cr2seeag0sa0dk"
+  }
+]
+```
 
 ### Application GUI Screenshots
 
 ![add](https://user-images.githubusercontent.com/106427209/222141713-45eb4015-6107-4581-bd9a-863b0313c035.PNG)
 ![list](https://user-images.githubusercontent.com/106427209/222141715-ac1d8cb1-12ac-460e-a35d-48eef0f14622.PNG)
 ![api](https://user-images.githubusercontent.com/106427209/222142086-bc5c6a7f-e8ac-4035-b018-2adc9bd8cc1e.PNG)
+![response_webhook](https://user-images.githubusercontent.com/106427209/222144942-450a4973-8346-4fdd-884a-09c143cb5fc9.PNG)
+
 
 
