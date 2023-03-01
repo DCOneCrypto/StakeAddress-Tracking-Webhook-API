@@ -81,6 +81,32 @@ curl --location -g '{{domain}}/api/services/app/DC_WebhookWallets/GetAll' \
 --data ''
 ```
 
+Example api response:
+```shell
+{
+    "result": {
+        "totalCount": 1,
+        "items": [
+            {
+                "dC_WebhookWallet": {
+                    "webhookname": "Webhookname",
+                    "webhookUrl": "https://webhook.site/9ad3f909-93b1-42da-918d-19a33445b3f2",
+                    "webhookStatus": false,
+                    "userId": 0,
+                    "id": "d205f25a-72b6-4e0e-c9c8-08db1614d234"
+                },
+                "userName": "dcone"
+            }
+        ]
+    },
+    "targetUrl": null,
+    "success": true,
+    "error": null,
+    "unAuthorizedRequest": false,
+    "__abp": true
+}
+```
+
 ### Get detailed information of a webhook (GetDC_WebhookWalletForEdit)
 
 Get a list of all webhooks connected to the system
