@@ -1,6 +1,6 @@
 # DCOne Crypto
 
-### Notification of wallet tracking via Webhook, API (Announcement of webhook activity payment stake address)
+### Notification of stake addresses tracking via Webhook, API (Announcement of webhook activity payment stake addresses)
 
 * Readmore: https://docs.dconecrypto.finance/notify/webhooks
 > Note: Create an account before using the APIs 
