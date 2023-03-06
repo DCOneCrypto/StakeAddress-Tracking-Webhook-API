@@ -1,4 +1,7 @@
-# DCOne Crypto
+<h1 align="center">
+<img src="logo/DCOneCrypto.png" width="200px">
+<p>DCOne Crypto Webhook</p>
+</h1>
 
 ### Notification of stake addresses tracking via Webhook, API (Announcement of webhook activity payment stake addresses)
 
